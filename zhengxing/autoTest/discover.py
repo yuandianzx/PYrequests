@@ -10,8 +10,8 @@ def all_case():
     # discover 方法筛选出来的用例，循环添加到测试套件中
     # discover 方法筛选出来的用例，循环添加到测试套件中
     # for test_suite in discover:
-    # for test_case in test_suite:
-    # testunit.addTests(test_case)
+    # for test_case_data in test_suite:
+    # testunit.addTests(test_case_data)
     # print(testunit)
     testcase.addTests(discover) # 直接加载 discover
     print(testcase)
