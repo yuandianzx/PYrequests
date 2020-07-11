@@ -1,7 +1,7 @@
 import configparser
 import os
 
-config_path = os.path.join(os.getcwd(), '..', 'conf/config.ini')    # 获取配置文件的路径
+config_path = os.path.join(os.path.dirname(__file__), '..', 'conf/config.ini')    # 获取配置文件的路径
 
 # 封装配置文件类
 class configUtils():
@@ -18,5 +18,6 @@ class configUtils():
 configUtils = configUtils()     # 在封装模块中创建配置文件类的对象，这样在其他地方调用类的时候就不需要封装了
 
 if __name__ == '__main__':      # 必须要有自测，不然后面麻烦的是自己
-    hosts = configUtils.read_config('path', 'log_path')
+    hosts = configUtils.read_config('path', 'testcase_path')
     print(hosts)
+    print(config_path)
