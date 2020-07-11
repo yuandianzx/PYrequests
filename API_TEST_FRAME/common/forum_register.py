@@ -1,24 +1,18 @@
 import requests
 
 session = requests.session()
-header = {"Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
+headers = {"Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
               "Accept-Encoding": "gzip,deflate",
               "User-Agent": "Mozilla/5.0(Windows NT 6.1;Win64;x64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 83.0.4103.116Safari / 537.36",
               "Accept": "text / html, application / xhtml + xml, application / xml;q = 0.9, image / webp, image / apng, * / *;q = 0.8, application / signed - exchange;v = b3;q = 0.9"
 
               }
 url1 = 'http://47.107.178.45/phpwind/'
-a = session.get(url1, headers = header)
+a = session.get(url1, headers = headers)
 
 
 def forum_register():
     url = 'http://47.107.178.45/phpwind/index.php'
-    header = {"Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
-              "Accept-Encoding": "gzip,deflate",
-              "User-Agent": "Mozilla/5.0(Windows NT 6.1;Win64;x64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 83.0.4103.116Safari / 537.36",
-              "Accept": "text / html, application / xhtml + xml, application / xml;q = 0.9, image / webp, image / apng, * / *;q = 0.8, application / signed - exchange;v = b3;q = 0.9"
-
-              }
     params = {
             'm' : 'u' ,
             'c' : 'register',
@@ -32,7 +26,7 @@ def forum_register():
         'csrf_token':'2ab91b36e1b33513'
 
             }
-    se = session.post(url, headers = header, params = params,data = data)
+    se = session.post(url, headers = headers, params = params,data = data)
     return se
 
 if __name__ == '__main__':
