@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/API_TEST_FRAME" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/API_TEST_FRAME/common" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/API_TEST_FRAME/conf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/API_TEST_FRAME/logs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/API_TEST_FRAME/report" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/API_TEST_FRAME/samples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/API_TEST_FRAME/test_case" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/API_TEST_FRAME/test_case_data" isTestSource="false" />
+    </content>
     <orderEntry type="jdk" jdkName="Python 3.5 (Study)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

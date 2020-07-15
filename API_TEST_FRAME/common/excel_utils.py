@@ -1,6 +1,6 @@
 import os
 import xlrd
-from API_TEST_FRAME.common.config_utils import configUtils
+from config_utils import ConfigUtils
 
 class ExcelUtils():
     def __init__(self, file_path):
@@ -26,6 +26,6 @@ class ExcelUtils():
         return sheet_list
 
 if __name__ == '__main__':
-    file_path = os.path.join(configUtils.read_config('path', 'test_case_path'), 'test.xlsx')
+    file_path = os.path.join(ConfigUtils.read_config('path', 'test_case_path'), 'test_wechat.xlsx')
     ExcelUtils = ExcelUtils(file_path)
     print(ExcelUtils.read_excel())
