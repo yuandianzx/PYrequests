@@ -1,5 +1,5 @@
 import requests
-from API_TEST_FRAME.common.config_utils import configUtils
+from API_TEST_FRAME_ZX.common.config_utils import configUtils
 
 session = requests.session()    # 创建session() 对象
 headers = {'Content-Type': 'application/json;charset=UTF-8'}

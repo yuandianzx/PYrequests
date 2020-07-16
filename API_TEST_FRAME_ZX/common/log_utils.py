@@ -1,7 +1,7 @@
 import logging
 import os
 import time
-from API_TEST_FRAME.common.config_utils import configUtils
+from API_TEST_FRAME_ZX.common.config_utils import configUtils
 
 class Logger():
     def __init__(self):

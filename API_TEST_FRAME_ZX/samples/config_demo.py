@@ -1,4 +1,4 @@
-from API_TEST_FRAME.common.config_utils import configUtils
+from API_TEST_FRAME_ZX.common.config_utils import configUtils
 
 configUtils = configUtils()
 hosts = configUtils.read_config('default','hosts')

@@ -1,6 +1,6 @@
 import os
 import xlrd
-from API_TEST_FRAME.common.config_utils import configUtils
+from API_TEST_FRAME_ZX.common.config_utils import configUtils
 
 excel_path = os.path.join(os.path.dirname(__file__), configUtils.read_config('path', 'testcase_path'), 'test.xlsx')
 print(excel_path)

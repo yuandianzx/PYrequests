@@ -10,14 +10,16 @@ class ExcelUtils():
         self.nrows = self.sheet.nrows
         self.ncols = self.sheet.ncols
 
-    def get_sheet(self):        # 封装sheet对象，方便扩展
+    def get_sheet(self):
+        '''封装sheet对象，方便扩展。'''
         return self.sheet
 
     def read_excel(self):
+        '''读取excel，将excel值取出转换为字典，并追加值列表中'''
         first_row = self.sheet.row_values(0)
         # print(first_row)
         sheet_list = []
-        for row in range(1, self.nrows):  # 将excel值取出转换为字典，并追加值列表中
+        for row in range(1, self.nrows):
             dict = {}
             for col in range(0, self.ncols):
                 cell_value = self.sheet.cell_value(row, col)
