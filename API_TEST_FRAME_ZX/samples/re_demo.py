@@ -9,7 +9,12 @@ import re
 #
 # print(value_split)
 
-value_findall = re.findall('\w+','liuyaN1234ab9')
+pattern = re.compile(r'\${\w+}')
+value_findall = re.findall('\${\w+}','{"access_token":${token}}')
+
+
+
 print(value_findall)
 
-# print('\\$')
+
+# print('\\t')

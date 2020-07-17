@@ -1,4 +1,6 @@
 import requests
-from API_TEST_FRAME_ZX.common.config_utils import configUtils
+from config_utils import ConfigUtils
+
+
 
 
