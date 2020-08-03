@@ -15,6 +15,26 @@ class Check():
         except:
             print("response响应请传入str类型")
 
+        self.pass_result = {
+            'code': 0,
+            'response_reason': self.response_dict.reason,
+            'response_code': self.response_dict.status_code,
+            'response_headers': self.response_dict.headers,
+            'response_body': self.response_dict.text,
+            'check_result': True,
+            'message': ''  # 扩招作为日志输出等
+        }
+
+        self.fail_result = {
+            'code': 2,
+            'response_reason': self.response_dict.reason,
+            'response_code': self.response_dict.status_code,
+            'response_headers': self.response_dict.headers,
+            'response_body': self.response_dict.text,
+            'check_result': False,
+            'message': ''  # 扩招作为日志输出等
+        }
+
     def no_check(self):
         pass
 
@@ -24,12 +44,16 @@ class Check():
         # print(key_list)
         result_list = []       # 将断言结果附加至列表中
         worrykey_list = []      # 将断言错误结果key附加至列表中
-        for k in ckeckkey_list:
+        for k in ckeckkey_list:     # 遍历ckeckkey_list，看检查的key是否存在响应中
             if k in self.response_dict.keys():
                 result_list.append(True)
             else:
                 result_list.append(False)
                 worrykey_list.append(k)
+        if True in result_list:
+            return self.pass_result
+        else:
+            return self.fail_result
 
         print('"json键是否存在"断言结果列表：' , result_list)
         print('"json键是否存在"断言错误结果key列表：', worrykey_list)
